@@ -20,22 +20,22 @@ struct mentorDetailView: View {
                         .clipShape(Circle())
 //                        .cornerRadius(10)
                     
-                    VStack(alignment: .leading, spacing:20) {
+                    VStack(alignment: .leading) {
                         HStack {
-                            Text("• \(mentor.name)")
+                            Text("\(mentor.name)")
                                 .font(.largeTitle)
-                                .fontWeight(.heavy)
+                                .fontWeight(.semibold)
                             Text("\(mentor.position)님")
                                 .font(.largeTitle)
-                                .fontWeight(.bold)
+                                .fontWeight(.semibold)
                             Spacer()
+                            
                         }
                         
                         Text("\(mentor.position)님 자세히 알아보기!")
                             .font(.title2)
                             .bold()
                             .foregroundColor(.secondary)
-                        
                         Divider()
                         Text("소개")
                             .font(.title3)
@@ -45,7 +45,7 @@ struct mentorDetailView: View {
                             .font(.headline)
                         
                         Divider()
-                        Text("연혁")
+                        Text("경력")
                             .font(.title3)
                             .bold()
                         
@@ -63,12 +63,8 @@ struct mentorDetailView: View {
                                 Image("Github")
                                     .resizable()
                                     .frame(width: 60, height: 60)
-                                //                                    .clipShape(Circle())
                                     .cornerRadius(12)
                             }
-                            
-                            //                            Spacer()
-                            
                             NavigationLink(destination:MyWebview(urlToLoad: mentor.blogUrl)) {
                                 Image("blogIcon")
                                     .resizable()
@@ -78,7 +74,9 @@ struct mentorDetailView: View {
                         }
                     }
                     
-                }.padding()
+                }
+                
+                .padding(.leading, 15)
                 
             }
             
@@ -90,5 +88,5 @@ struct mentorDetailView: View {
 
 
 #Preview {
-    mentorDetailView(mentor:  MentorData(name: "박철현", image: "park", position: "Mentor", oneSentence: "여러분과 개발의 즐거움을 함께할 수 있었으면 합니다.", history: "• 프리랜서 iOS 개발자\n • 롯데카드, 컬리 등에서 근무\n", gitUrl: "https://github.com/blueprajna", blogUrl: ""))
+    mentorDetailView(mentor:  MentorData(name: "박철현", image: "park", position: "Mentor", oneSentence: "여러분과 개발의 즐거움을 함께할 수 있었으면 합니다.", history: "• 프리랜서 iOS 개발자\n• 롯데카드, 컬리 등에서 근무\n", gitUrl: "https://github.com/blueprajna", blogUrl: ""))
 }

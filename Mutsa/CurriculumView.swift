@@ -33,7 +33,8 @@ struct CurriculumView: View {
                 } header: {
                     Text(Curriculum.Category.preLearning.rawValue)
                         .font(.title2)
-                        .foregroundStyle(.black)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(.purple)
                 }
                 
                 Section {
@@ -51,7 +52,8 @@ struct CurriculumView: View {
                 } header: {
                     Text(Curriculum.Category.mainCurriculum.rawValue)
                         .font(.title2)
-                        .foregroundStyle(.black)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(.purple)
                 }
                 
                 Section {
@@ -69,7 +71,8 @@ struct CurriculumView: View {
                 } header: {
                     Text(Curriculum.Category.project.rawValue)
                         .font(.title2)
-                        .foregroundStyle(.black)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(.purple)
                 }
             }
         }

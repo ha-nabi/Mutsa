@@ -72,7 +72,7 @@ struct BottlesView: View {
                 .scrollTargetBehavior(.viewAligned)
                 .scrollIndicators(.hidden)
             })
-            .frame(height: 500)
+            .frame(height: 470)
             .padding(.horizontal, -15.0)
             .padding(.top, 2)
         }

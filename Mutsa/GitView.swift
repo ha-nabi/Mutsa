@@ -72,7 +72,7 @@ struct GitView: View {
                 .scrollTargetBehavior(.viewAligned)
                 .scrollIndicators(.hidden)
             })
-            .frame(height: 520)
+            .frame(height: 470)
             .padding(.horizontal, -15.0)
             .padding(.top, 2)
         }
